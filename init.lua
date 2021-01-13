@@ -1,6 +1,6 @@
 file = io.open(minetest.get_worldpath().."/chat_record.txt", "a")
-local seperator = "\n-------------\n  Seperator\n-------------\n \n"
-file:write(seperator)
+local separator = "\n-------------\n  Separator\n-------------\n \n"
+file:write(separator)
 minetest.register_on_chat_message(function(name, message)
 	local time = os.date('%Y-%m-%d %H:%M:%S')
 	local text = string.format("%s: <%s> %s",tostring(time),name,message)
